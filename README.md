@@ -10,4 +10,5 @@ Deploy services to Create, Read, Update and Delete (CRUD) items in a DynamoDB ta
 3. <b>Resources</b>: Resources are AWS infrastructure components used by the functions, such as a DynamoDB table, for example.<br>
 4. <b>Services</b>: A service is an unit of organization. A service is configured via a file called <u>serverless.yml</u>, where you define your functions, events and resources.<br>
 
-See: [Serverless documentation](https://www.serverless.com/framework/docs)
+<a href="https://www.serverless.com/framework/docs" target="_blank">See Serverless Framework Documentation</a>
+
