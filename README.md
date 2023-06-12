@@ -53,3 +53,67 @@ The serverless.yml file contains all the specifications necessary to create the 
 
 To test the API, install Postman. See:   <a href="https://www.postman.com/downloads/" target="_blank">Postman download</a>
 
+<h2><b>Step by Step Execution</b></h2>
+
+1. Copy the source code for the functions, from the GitHub repository.
+2. Create an access key in the AWS IAM console and use with the <i>AWS configure</i> command (in the terminal).
+
+![](images/accesskey.png)
+
+3. Create the <i>serverless.yml</i> file.
+4. Install the SDK and its dependencies:
+
+> npm install aws-sdk
+
+This command installs the SDK for JavaScript and updates the package.json to list the SDK as a project dependency.
+
+5. Install the uuid module:
+
+> npm install uuid
+
+6. Run the command to create the project:
+
+   > serverless
+
+7. Run the command to deploy:
+   
+   > serverless deploy
+
+    - the first time you run, the endpoints, the functions and the DynamoDB table will be created.
+
+![](images/lambdafunctions.png)<br>
+
+![](images/apigateway.png)<br>
+
+![](images/dynamodbtable.png)<br>
+
+    
+    - but, it´s necessary to copy the DynamoDB table ARN identifier and paste it into the <i>serverless.yml</i>, and run the deploy again, to give access for the functions.
+
+8. Run tests using Postman:
+
+- Post a new item:
+
+![](images/postnewitem.png)
+
+- See the item created in the AWS DynamoDB console:
+
+![](images/itemcreated.png)
+   
+- Access the Get Items endpoint:
+
+![](images/getitems.png)
+
+- Access an Item by Id:
+
+![](images/getidentifieditem.png)
+
+- Update an Item:
+
+![](images/updateitem.png)
+
+9. Remove all functions, resources and services:
+
+> serverless remove
+
+
