@@ -24,3 +24,32 @@ It´s necessary to have an account, created in the AWS IAM with programmatic acc
 
 <a href="https://nodejs.org/en" target="_blank">See Node.js Documentation</a>
 
+<h3><b>Serverless framework installed</b></h3>
+
+> npm i -g serverless
+
+<h3><b>The code</b></h3>
+
+The code was developed by Cassiano Peres, and it´s available at: <a href="https://github.com/cassianobrexbit/dio-live-serverless-2907/tree/master/src" target="_blank">GitHub Repository</a>
+
+<h3><b>The serverless.yml file</b></h3>
+
+The serverless.yml file contains all the specifications necessary to create the AWS resources and deploy the Lambda Functions.
+
+<h4><b>Specify the resources (in this case, the DynamoDB table):</b></h4>
+
+![](images/resources.png)
+
+<h4><b>Give access over DynamoDB for Lambda functions:</b></h4>
+
+![](images/iamacess.png)
+
+<h4><b>For each function, specify the name, the handler, the path and the method associated:</b></h4>
+
+![](images/functions.png)
+
+
+<h3><b>Postman installed</b></h3>
+
+To test the API, install Postman. See:   <a href="https://www.postman.com/downloads/" target="_blank">Postman download</a>
+
